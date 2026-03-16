@@ -1,5 +1,5 @@
 site:
-  name: Portfolio
+  name: MagusDev
   site: 'https://yourdomain.com'
   base: '/'
   trailingSlash: false

@@ -68,5 +68,5 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
-  footNote: `Built with Astro · All rights reserved.`,
+  footNote: `© MagusDev · All rights reserved.`,
 };
