@@ -12,12 +12,15 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText
+    tagline="Contact"
+    title="Let's build something together."
+    subtitle="Have a project in mind, want to discuss an architecture problem, or just want to connect? Fill in the form and I'll get back to you within 24 hours."
+  />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send a message"
     inputs={[
       {
         type: 'text',
@@ -31,48 +34,34 @@ const metadata = {
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Tell me about your project or question',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form, you agree to the collection of your personal information for the purpose of responding to your enquiry.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="I typically respond within 24 hours."
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Contact Details *************** -->
 
   <Features2
-    title="We are here to help!"
+    title="Other ways to reach me"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'GitHub',
+        description: 'Browse my open-source work and project source code.',
+        icon: 'tabler:brand-github',
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'LinkedIn',
+        description: 'Connect with me professionally.',
+        icon: 'tabler:brand-linkedin',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'you@yourdomain.com',
         icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
       },
     ]}
   />
