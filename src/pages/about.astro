@@ -1,8 +1,8 @@
 ﻿---
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -21,105 +21,119 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Building systems that<br />
-      <span class="text-accent dark:text-white"> think, scale, and endure.</span>
+      From Embedded Medical Devices to<br />
+      <span class="text-accent dark:text-white"> Autonomous Agentic Ecosystems.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      I am a software engineer specialising in agentic AI systems, distributed cloud infrastructure, and immersive
-      full-stack web. I obsess over the intersection where autonomous intelligence meets production reliability.
+      I am a multidisciplinary AI &amp; Systems Engineer currently completing my Master's in Computer Science and
+      Engineering at the University of Oulu (graduating June 2026). My work exists at the intersection of complex AI
+      logic, resilient cloud infrastructure, and highly interactive user experiences. I don't just prompt language
+      models , I build the distributed backend systems, vector databases, and multi-agent reasoning loops required to
+      put them into production.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Background ******************** -->
 
-  <Stats
-    title="By the numbers"
-    stats={[
-      { title: 'Projects Shipped', amount: '40+' },
-      { title: 'Technologies', amount: '30+' },
-      { title: 'Agent Frameworks', amount: '5' },
-      { title: 'Years Building', amount: '4+' },
+  <Steps2
+    title="A Foundation in Logic & Interactive Systems"
+    subtitle="My journey didn't start in web development. I began in Electrical and Computer Engineering (B.Sc., University of Tehran), where I worked as an R&D Engineer developing algorithms for critical medical devices."
+    items={[
+      {
+        title: 'Interactive Systems & Game Development',
+        description:
+          "In parallel, I discovered a deep passion for interactive systems — eventually co-founding a game development studio. I won the Best Bachelor's Project Award for EmoGalaxy 2, an interactive mobile game using on-device neural networks to help children with autism improve their emotion recognition skills. Building game loops taught me complex state management, performance optimization, and spatial UI — skills that now directly influence how I architect full-stack applications.",
+      },
+      {
+        title: 'From Hardware Logic to Software Systems',
+        description:
+          'Working at the intersection of embedded systems and interactive software gave me an intuition for performance constraints and deterministic logic that pure web developers rarely develop. Every millisecond matters whether you are running an IK solver on eight spider legs or running LLM inference on a constrained device.',
+      },
     ]}
   />
 
-  <!-- Skills / Toolbox ************** -->
+  <!-- Cloud & AI ******************** -->
 
-  <Features3
-    title="Toolbox"
-    subtitle="The primary technologies I reach for across the three pillars of my practice."
-    columns={3}
-    isBeforeContent={true}
+  <Steps2
+    title="Scaling Intelligence: Infrastructure & Agentic AI"
+    isReversed={true}
+    subtitle="As my projects grew in complexity, I realized that intelligent systems require bulletproof infrastructure. Today my focus is entirely on cloud-native backend engineering and Multi-Agent Systems."
     items={[
       {
-        title: 'Agentic AI',
-        description: 'Microsoft AutoGen, LangGraph, LangChain, OpenAI API, Ollama, OpenLit, DeepEval, RAG pipelines',
+        title: "Master's Thesis — UBICOMP Research Group, University of Oulu",
+        description:
+          'I am architecting production-ready agentic workflows using the Microsoft Agent Framework, LangGraph, and PydanticAI — with full LLM observability instrumented via OpenLit for latency, token, and cost telemetry.',
+      },
+      {
+        title: 'Production Systems at Scale',
+        description:
+          'Whether engineering a high-performance RAG pipeline backed by Milvus, deploying a distributed SCADA system using Kafka and Kubernetes, or building a full-tenant SaaS ERP (Klaviro) with Next.js 15 and PostgreSQL — my goal is always the same: systems that are observable, scalable, and autonomous.',
+      },
+    ]}
+  />
+
+  <!-- Homelab ************************ -->
+
+  <Steps2
+    title="The Homelab & Continuous Learning"
+    subtitle="I am a firm believer in learning by deploying. Outside of academic and freelance work, I maintain a self-hosted micro-cloud PaaS environment using Dokploy and Docker Compose."
+    items={[
+      {
+        title: 'Cloudflare Zero Trust & Edge Monitoring',
+        description:
+          'To ensure secure public ingress without exposing my local network, I route all traffic through Cloudflare Zero Trust Tunnels, with uptime monitored via Uptimeflare edge workers. This stack mirrors what enterprise teams run at significant cost — but entirely on my own hardware.',
+      },
+      {
+        title: 'Experimental AI Sandbox',
+        description:
+          'The homelab serves as my personal proving ground for testing bleeding-edge, sandboxed AI frameworks like Agent Zero and Ironclaw before adopting patterns into production work.',
+      },
+    ]}
+  />
+
+  <!-- Technical Arsenal ************** -->
+
+  <Features3
+    title="Technical Arsenal"
+    subtitle="The primary tools and technologies across the three pillars of my practice."
+    columns={3}
+    items={[
+      {
+        title: 'Agentic AI & Orchestration',
+        description:
+          'LangGraph · AutoGen (Microsoft Agent Framework) · PydanticAI · OpenLit · LLM-as-a-Judge evaluation · Milvus · Qdrant · RAG architectures · Python',
         icon: 'tabler:brain',
       },
       {
-        title: 'Cloud & Infrastructure',
-        description: 'Kubernetes, Docker, Kafka, MQTT, TimescaleDB, PgBouncer, MinIO, Nginx, Cloudflare',
+        title: 'Cloud & Distributed Infrastructure',
+        description:
+          'Docker · Kubernetes · Apache Kafka · MQTT · FastAPI · Dokploy · Cloudflare Zero Trust · MinIO · Nginx · TimescaleDB · PgBouncer',
         icon: 'tabler:cloud',
       },
       {
-        title: 'Full-Stack & Spatial',
-        description: 'Next.js 15, Astro, TypeScript, PostgreSQL, Prisma, Three.js / WebGL, Unity, Unreal Engine 5',
+        title: 'Spatial & Full-Stack Web',
+        description:
+          'Next.js 15 · React · TypeScript · Node.js · PostgreSQL · Prisma · WebGL · Three.js · Unity · Unreal Engine 5 · C#',
         icon: 'tabler:cube-3d-sphere',
       },
     ]}
   />
 
-  <!-- Principles ******************** -->
+  <!-- CTA **************************** -->
 
-  <Steps2
-    title="How I work"
-    subtitle="The principles that guide every project from first commit to production."
-    items={[
+  <CallToAction
+    title="Let's build the next generation of intelligent systems."
+    subtitle="I am actively seeking full-time roles starting Autumn 2026, with flexibility for part-time work sooner, in AI Engineering, Cloud Infrastructure, or Backend Development."
+    actions={[
       {
-        title: 'Systems thinking first',
-        description:
-          "Before writing a line of code I map data flow, failure modes, and scaling boundaries. Good architecture is invisible when it works and obvious when it doesn't.",
+        variant: 'primary',
+        text: 'Get In Touch',
+        href: '/contact',
       },
       {
-        title: 'Observable by default',
-        description:
-          'Every system I ship is instrumented from day one - structured logs, distributed traces, and cost attribution so problems surface before users notice them.',
-      },
-      {
-        title: 'Ship, then iterate',
-        description:
-          'A working system in production beats a perfect system in planning. I favour tight feedback loops, feature flags, and zero-downtime deploys over big-bang releases.',
-      },
-    ]}
-  />
-
-  <!-- Highlights ******************** -->
-
-  <Steps2
-    title="Selected highlights"
-    isReversed={true}
-    callToAction={{
-      text: 'View case studies',
-      href: '/#case-studies',
-    }}
-    items={[
-      {
-        title: 'Multi-agent ecosystem with full LLM observability',
-        description:
-          'Dynamic skill-loading architecture across an autonomous agent swarm, instrumented end-to-end with OpenLit for latency, token, and cost telemetry.',
-        icon: 'tabler:brain',
-      },
-      {
-        title: 'Full-cycle SaaS ERP delivery',
-        description:
-          'Sole engineer - architecture through production - for a multi-tenant music school platform using Next.js 15, PgBouncer, and MinIO.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Enterprise Kafka + MQTT SCADA pipeline on Kubernetes',
-        description:
-          'Replaced a monolithic relay with an event-driven microservices architecture capable of ingesting thousands of sensor events per second.',
-        icon: 'tabler:topology-star-ring-3',
+        text: 'View Case Studies',
+        href: '/#case-studies',
       },
     ]}
   />
