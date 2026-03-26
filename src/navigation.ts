@@ -28,7 +28,10 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Get In Touch', href: getPermalink('/contact') }],
+  actions: [
+    { text: 'CV', href: '/resume.pdf', target: '_blank' },
+    { text: 'Get In Touch', href: getPermalink('/contact') },
+  ],
 };
 
 export const footerData = {
